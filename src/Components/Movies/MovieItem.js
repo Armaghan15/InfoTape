@@ -8,7 +8,10 @@ const MovieItem = (props) => {
   return (
     <div className={classes.MovieItem}>
       <img src={IMG_URL + props.imageURL} alt={props.imageALT} />
-      <h3 className={classes.movieItemName}>{props.movieName}</h3>
+      <div className={classes.textAndRating}>
+        <h3 className={classes.movieItemName}>{props.movieName}</h3>
+        <h3 className={classes.movieItemRating}>⭐ {props.movieRating}</h3>
+      </div>
     </div>
   );
 };

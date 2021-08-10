@@ -4,6 +4,7 @@ import classes from "./Movies.module.css";
 
 // Imports for external Components
 import TrendingMovies from "./TrendingMovies";
+import AllMovies from "./AllMovies";
 
 const Movies = () => {
   return (
@@ -19,6 +20,8 @@ const Movies = () => {
       <section className={classes.trendingSection}>
         <h1 className={classes.trendingSectionHeader}>Trending Movies</h1>
         <TrendingMovies />
+        <h1 className={classes.allSectionHeader}>All Movies</h1>
+        <AllMovies />
       </section>
     </div>
   );

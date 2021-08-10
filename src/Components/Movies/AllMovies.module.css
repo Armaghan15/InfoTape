@@ -1,0 +1,190 @@
+.AllMovies {
+  margin-left: 10px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 240px 240px 240px 240px;
+  gap: 10px;
+  grid-column-gap: 140px;
+}
+
+
+@media screen and (min-width: 1800px)  {
+  .AllMovies {
+    grid-template-columns: 240px 240px 240px 240px 240px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .AllMovies {
+    margin-left: 13px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .AllMovies {
+    margin-left: 60px;
+    grid-template-columns: 240px 240px 240px 240px 240px;
+  }
+}
+
+
+
+@media screen and (min-width: 1460px) {
+  .AllMovies {
+    grid-template-columns: 240px 240px 240px;
+    grid-column-gap: 160px;
+    margin-left: 69px;
+  }
+}
+
+
+@media screen and (max-width: 1380px) {
+  .AllMovies {
+    grid-template-columns: 240px 240px 240px 240px;
+    grid-column-gap: 50px;
+    margin-left: 60px;
+  }
+} 
+
+
+@media screen and (max-width: 1310px) {
+  .AllMovies {
+    margin-left: 33px;
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .AllMovies {
+    margin-left: 20px;
+  }
+}
+
+
+
+@media screen and (max-width: 1230px) {
+  .AllMovies {
+    margin-left: 15px;
+  }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .AllMovies {
+    margin-left: 10px;
+  }
+}
+
+
+
+@media screen and (max-width: 1190px) {
+  .AllMovies {
+    grid-template-columns: 240px 240px 240px;
+    margin-left: 150px;
+  }
+}
+
+
+@media screen and (max-width: 1050px) {
+  .AllMovies {
+    margin-left: 70px;
+  }
+}
+
+
+@media screen and (max-width: 980px) {
+  .AllMovies {
+    margin-left: 50px;
+  }
+}
+
+
+@media screen and (max-width: 975px) {
+  .AllMovies {
+    margin-left: 38px;
+  }
+}
+
+
+
+@media screen and (max-width: 950px) {
+  .AllMovies {
+    margin-left: 30px;
+  }
+}
+
+
+@media screen and (max-width: 930px) {
+  .AllMovies {
+    margin-left: 17px;
+  }
+}
+
+
+@media screen and (max-width: 910px) {
+  .AllMovies {
+    margin-left: 9px;
+  }
+}
+
+
+@media screen and (max-width: 895px) {
+  .AllMovies {
+    grid-template-columns: 240px 240px;
+    grid-column-gap: 150px;
+    margin-left: 60px;
+  }
+}
+
+
+@media screen and (max-width: 805px) {
+  .AllMovies {
+    grid-column-gap: 130px;
+    margin-left: 45px;
+  }
+}
+
+
+@media screen and (max-width: 775px) {
+  .AllMovies {
+    grid-column-gap: 130px;
+    margin-left: 25px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .AllMovies {
+    grid-column-gap: 120px;
+    margin-left: 40px;
+  }
+}
+
+
+@media screen and (max-width: 730px) {
+  .AllMovies {
+    margin-left: 10px;
+  }
+}
+
+
+@media screen and (max-width: 680px) {
+  .AllMovies {
+    grid-column-gap: 100px;
+  }
+}
+
+
+@media screen and (max-width: 655px) {
+  .AllMovies {
+    grid-template-columns: 240px;
+    margin-left: 120px;
+  }
+}
+
+
+@media screen and (max-width: 625px) {
+  .AllMovies {
+    margin-left: 16px;
+  }
+}

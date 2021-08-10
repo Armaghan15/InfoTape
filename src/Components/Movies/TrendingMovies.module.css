@@ -1,23 +1,22 @@
 .TrendingMovies {
-  margin-left: 23px;
+  margin-left: 10px;
   margin-top: 20px;
   display: grid;
-  grid-template-columns: 240px 240px 240px 240px 240px 240px;
+  grid-template-columns: 240px 240px 240px 240px;
   gap: 10px;
+  grid-column-gap: 140px;
 }
-
 
 
 @media screen and (min-width: 1800px)  {
   .TrendingMovies {
-    margin-left: 60px;
-    grid-template-columns: 240px 240px 240px 240px 240px 240px 240px;
+    grid-template-columns: 240px 240px 240px 240px 240px;
   }
 }
 
 @media screen and (min-width: 1600px) {
   .TrendingMovies {
-    margin-left: 150px;
+    margin-left: 13px;
   }
 }
 
@@ -29,8 +28,19 @@
 }
 
 
+@media screen and (min-width: 1460px) {
+  .TrendingMovies {
+    grid-template-columns: 240px 240px 240px;
+    grid-column-gap: 160px;
+    margin-left: 69px;
+  }
+}
+
+
 @media screen and (max-width: 1380px) {
   .TrendingMovies {
+    grid-template-columns: 240px 240px 240px 240px;
+    grid-column-gap: 50px;
     margin-left: 60px;
   }
 } 
@@ -49,14 +59,6 @@
   }
 }
 
-
-@media screen and (max-width: 1260px) {
-  .TrendingMovies {
-    grid-template-columns: 240px 240px 240px 240px;
-    grid-column-gap: 60px;
-    margin-left: 35px;
-  }
-}
 
 
 @media screen and (max-width: 1230px) {
@@ -168,5 +170,20 @@
 @media screen and (max-width: 680px) {
   .TrendingMovies {
     grid-column-gap: 100px;
+  }
+}
+
+
+@media screen and (max-width: 655px) {
+  .TrendingMovies {
+    grid-template-columns: 240px;
+    margin-left: 120px;
+  }
+}
+
+
+@media screen and (max-width: 625px) {
+  .TrendingMovies {
+    margin-left: 16px;
   }
 }

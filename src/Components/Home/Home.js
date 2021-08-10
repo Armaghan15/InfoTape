@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 
 import classes from "./Home.module.css";
 
@@ -15,18 +16,20 @@ const Home = () => {
           <h1 className={classes.homeHeaderParagraph}>
             Get Real Data of Thousands of movies and TV Shows
           </h1>
-          <Link
+          <ScrollLink
             className={classes.exploreButton}
             to="homeOptions"
             smooth={true}
             duration={1500}
           >
             Explore
-          </Link>
+          </ScrollLink>
         </div>
       </section>
       <section id="homeOptions" className={classes.homeOptions}>
-        <HomeOption className={classes.moviesHomeOption} title="Movies" />
+        <RouterLink className="RouterLink" to="/movies">
+          <HomeOption className={classes.moviesHomeOption} title="Movies" />
+        </RouterLink>
         <HomeOption className={classes.tvShowsHomeOption} title="TV Shows" />
       </section>
     </div>
