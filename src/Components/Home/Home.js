@@ -30,7 +30,9 @@ const Home = () => {
         <RouterLink className="RouterLink" to="/movies">
           <HomeOption className={classes.moviesHomeOption} title="Movies" />
         </RouterLink>
-        <HomeOption className={classes.tvShowsHomeOption} title="TV Shows" />
+        <RouterLink className="RouterLink" to="/tvshows">
+          <HomeOption className={classes.tvShowsHomeOption} title="TV Shows" />
+        </RouterLink>
       </section>
     </div>
   );

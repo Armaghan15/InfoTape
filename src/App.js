@@ -5,6 +5,7 @@ import "./App.css";
 // imports for external components
 import HomePage from "./Pages/HomePage";
 import MoviesPage from "./Pages/MoviesPage";
+import TVShowPage from "./Pages/TVShowsPage";
 
 const App = () => {
   return (
@@ -14,6 +15,9 @@ const App = () => {
       </Route>
       <Route path="/movies">
         <MoviesPage />
+      </Route>
+      <Route path="/tvshows">
+        <TVShowPage />
       </Route>
     </div>
   );

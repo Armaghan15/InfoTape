@@ -7,7 +7,7 @@
 }
 
 
-.MovieItem {
+.ListItem {
   background-color: var(--blue);
   border: 3px solid var(--green);
   width: 370px;
@@ -19,13 +19,13 @@
 }
 
 
-.MovieItem:hover {
+.ListItem:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   /* transform: translateY(-5px); */
   transform: scale(0.98);
 }
 
-.MovieItem img {
+.ListItem img {
   margin-left: -0.5px;
   width: 363.5px;
   height: 368px;
@@ -38,29 +38,31 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 5px;
+  margin-top: 7px;
 }
 
 
-.movieItemName {
+.listItemName {
   color: white;
   margin-top: 5px;
+  font-size: 1.2em;
 }
 
 
-.movieItemRating {
+.listItemRating {
   color: var(--green);
+  font-size: 1.3em;
 }
 
 
 
 @media screen and (max-width: 1260px) {
-  .MovieItem {
+  .ListItem {
     width: 280px;
     height: 409px;
   }
 
-  .MovieItem img {
+  .ListItem img {
     width: 273.5px;
     height: 350px;
   }
@@ -68,7 +70,7 @@
 
 
 
-@media screen and (max-width: 895px) {
+/* @media screen and (max-width: 895px) {
   .MovieItem {
     width: 350px;
     height: 420px;
@@ -78,17 +80,17 @@
     width: 344px;
     height: 365px;
   }
-}
+} */
 
 
 
-@media screen and (max-width: 750px) {
-  .MovieItem {
+@media screen and (max-width: 1500px) {
+  .ListItem {
     width: 300px;
     height: 400px;
   }
 
-  .MovieItem img {
+  .ListItem img {
     width: 294px;
     height: 345px;
   }
@@ -96,13 +98,13 @@
 
 
 @media screen and (max-width: 655px) {
-  .MovieItem {
+  .ListItem {
     width: 380px;
     height: 460px;
   }
 
-  .MovieItem img {
-    width: 375px;
+  .ListItem img {
+    width: 374px;
     height: 400px;
     margin-top: -1.3px;
   }

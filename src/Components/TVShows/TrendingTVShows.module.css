@@ -1,4 +1,4 @@
-.TrendingMovies {
+.TrendingTvShows {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
