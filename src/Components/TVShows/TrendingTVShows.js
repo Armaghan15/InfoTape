@@ -11,7 +11,7 @@ const TrendingTVShows = (props) => {
   // State for our trending movies
   const [trendingTVShows, setTrendingTVShows] = useState([]);
 
-  // Method for fetching/getting trending moveis from TMDB API using axios
+  // Method for fetching/getting trending tv shows from TMDB API using axios
   const fetchTrendingTVShows = useCallback(async () => {
     const trendingTVShowsURL =
       "https://api.themoviedb.org/3/trending/tv/day?api_key=508720d4e5bd95e63fd8e0b7067d506c";
@@ -26,7 +26,7 @@ const TrendingTVShows = (props) => {
     }
   });
 
-  // Using the usEffect hook to run the fetchTrendingMovies method only when the method fetchTrendingMovies itself changes
+  // Using the usEffect hook to run the fetchTrendingTVShows method only when the method fetchTrendingTVShows itself changes
   useEffect(() => {
     fetchTrendingTVShows();
   }, []);
@@ -37,9 +37,9 @@ const TrendingTVShows = (props) => {
         <ListItem
           key={trendingTVShow.id}
           imageURL={trendingTVShow.poster_path}
-          movieName={trendingTVShow.name}
+          listItemName={trendingTVShow.name}
           imageALT={trendingTVShow.original_title}
-          movieRating={trendingTVShow.vote_average}
+          listItemRating={trendingTVShow.vote_average}
         />
       ))}
     </div>

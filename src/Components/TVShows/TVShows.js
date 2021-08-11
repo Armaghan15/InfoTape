@@ -4,6 +4,7 @@ import classes from "./TVShows.module.css";
 
 // Imports for external Components
 import TrendingTVShows from "./TrendingTVShows";
+import AllTVShows from "./AllTVShows";
 
 const TVShows = () => {
   return (
@@ -19,6 +20,8 @@ const TVShows = () => {
       <section className={classes.trendingSection}>
         <h1 className={classes.trendingSectionHeader}>Trending TV Shows</h1>
         <TrendingTVShows />
+        <h1 className={classes.allSectionHeader}>All TV Shows</h1>
+        <AllTVShows />
       </section>
     </div>
   );

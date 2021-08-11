@@ -9,8 +9,8 @@ const ListItem = (props) => {
     <div className={classes.ListItem}>
       <img src={IMG_URL + props.imageURL} alt={props.imageALT} />
       <div className={classes.textAndRating}>
-        <h3 className={classes.listItemName}>{props.movieName}</h3>
-        <h3 className={classes.listItemRating}>⭐ {props.movieRating}</h3>
+        <h3 className={classes.listItemName}>{props.listItemName}</h3>
+        <h3 className={classes.listItemRating}>⭐ {props.listItemRating}</h3>
       </div>
     </div>
   );

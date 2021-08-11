@@ -37,9 +37,9 @@ const TrendingMovies = (props) => {
         <ListItem
           key={trendingMovie.id}
           imageURL={trendingMovie.poster_path}
-          movieName={trendingMovie.title}
+          listItemName={trendingMovie.title}
           imageALT={trendingMovie.original_title}
-          movieRating={trendingMovie.vote_average}
+          listItemRating={trendingMovie.vote_average}
         />
       ))}
     </div>

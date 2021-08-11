@@ -26,7 +26,7 @@ const AllMovies = (props) => {
     }
   });
 
-  // Using the usEffect hook to run the fetchAllMovies method only when the method fetchTrendingMovies itself changes
+  // Using the usEffect hook to run the fetchAllMovies method only when the method fetchAllMovies itself changes
   useEffect(() => {
     fetchAllMovies();
   }, []);
@@ -37,9 +37,9 @@ const AllMovies = (props) => {
         <ListItem
           key={movie.id}
           imageURL={movie.poster_path}
-          movieName={movie.original_title}
+          listItemName={movie.original_title}
           imageALT={movie.original_title}
-          movieRating={movie.vote_average}
+          listItemRating={movie.vote_average}
         />
       ))}
     </div>
