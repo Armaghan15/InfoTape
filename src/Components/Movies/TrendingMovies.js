@@ -5,7 +5,7 @@ import axios from "axios";
 import classes from "./TrendingMovies.module.css";
 
 // Imports for external Components
-import ListItem from "../UI/ListItem";
+import ItemsRow from "../UI/ItemsRow";
 
 const TrendingMovies = (props) => {
   // State for our trending movies
@@ -23,6 +23,7 @@ const TrendingMovies = (props) => {
     if (responseIsValid) {
       const data = await response.data.results;
       setTrendingMovies(data);
+      console.log(trendingMovies);
     }
   });
 
@@ -33,15 +34,7 @@ const TrendingMovies = (props) => {
 
   return (
     <div className={`${classes.TrendingMovies} ${props.className}`}>
-      {trendingMovies.map((trendingMovie) => (
-        <ListItem
-          key={trendingMovie.id}
-          imageURL={trendingMovie.poster_path}
-          listItemName={trendingMovie.title}
-          imageALT={trendingMovie.original_title}
-          listItemRating={trendingMovie.vote_average}
-        />
-      ))}
+      <ItemsRow rowItems={trendingMovies} />
     </div>
   );
 };

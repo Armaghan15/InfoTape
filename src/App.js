@@ -4,21 +4,24 @@ import "./App.css";
 
 // imports for external components
 import HomePage from "./Pages/HomePage";
-import MoviesPage from "./Pages/MoviesPage";
-import TVShowPage from "./Pages/TVShowsPage";
+import ExplorePage from "./Pages/ExplorePage";
+import ItemDetailComponent from "./Components/UI/ItemDetailComponent";
 
 const App = () => {
+  const IMG_URL = "https://image.tmdb.org/t/p/w500/";
+
   return (
     <div className="App">
       <Route exact path="/">
         <HomePage />
       </Route>
-      <Route path="/movies">
-        <MoviesPage />
+      <Route path="/explore">
+        <ExplorePage />
       </Route>
-      <Route path="/tvshows">
-        <TVShowPage />
-      </Route>
+      <Route
+        path="/details/:mediaType/:id"
+        component={ItemDetailComponent}
+      ></Route>
     </div>
   );
 };

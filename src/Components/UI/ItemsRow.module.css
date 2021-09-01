@@ -1,0 +1,20 @@
+.ItemsRow {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+} 
+
+
+.ItemsRow::-webkit-scrollbar {
+  margin-top: 100px;
+  height: 3px;
+  width: 2px;
+}
+.ItemsRow::-webkit-scrollbar-track {
+  background: #000;
+  border: 1px solid rgb(92, 92, 92);
+}
+.ItemsRow::-webkit-scrollbar-thumb {
+  width: 10px;
+}

@@ -9,15 +9,15 @@
 
 .ListItem {
   background-color: var(--blue);
-  border: 3px solid var(--green);
-  width: 370px;
-  height: 440px;
+  /* border: 3px solid var(--green); */
+  width: 300px;
+  height: 410px;
+  margin-left: 7px;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   transition: all .4s ease-in-out;
   cursor: pointer;
 }
-
 
 .ListItem:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -27,18 +27,18 @@
 
 .ListItem img {
   margin-left: -0.5px;
-  width: 363.5px;
+  width: 300.5px;
   height: 368px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
 
 
+
 .textAndRating {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 7px;
 }
 
 
@@ -56,56 +56,20 @@
 
 
 
-@media screen and (max-width: 1260px) {
-  .ListItem {
-    width: 280px;
-    height: 409px;
-  }
-
-  .ListItem img {
-    width: 273.5px;
-    height: 350px;
-  }
-}
-
-
-
-/* @media screen and (max-width: 895px) {
-  .MovieItem {
-    width: 350px;
-    height: 420px;
-  }
-
-  .MovieItem img {
-    width: 344px;
-    height: 365px;
-  }
-} */
-
-
 
 @media screen and (max-width: 1500px) {
   .ListItem {
-    width: 300px;
-    height: 400px;
+    width: 200px;
+    height: 290px;
   }
 
   .ListItem img {
-    width: 294px;
-    height: 345px;
-  }
-}
-
-
-@media screen and (max-width: 655px) {
-  .ListItem {
-    width: 380px;
-    height: 460px;
+    width: 180px;
+    height: 245px;
   }
 
-  .ListItem img {
-    width: 374px;
-    height: 400px;
-    margin-top: -1.3px;
+  .textAndRating {
+    font-size: 13px;
+    margin-top: 5px;
   }
 }

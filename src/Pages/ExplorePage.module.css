@@ -1,0 +1,14 @@
+.MoviesPage {
+  background-color: rgb(0, 0, 0);
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .MoviesPage {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

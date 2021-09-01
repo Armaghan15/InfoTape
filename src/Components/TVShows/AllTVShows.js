@@ -5,7 +5,7 @@ import axios from "axios";
 import classes from "./AllTVShows.module.css";
 
 // Imports for external Components
-import ListItem from "../UI/ListItem";
+import ItemsRow from "../UI/ItemsRow";
 
 const AllTVShows = (props) => {
   // State for our All movies
@@ -33,15 +33,7 @@ const AllTVShows = (props) => {
 
   return (
     <div className={`${classes.AllTVShows} ${props.className}`}>
-      {AllTVShows.map((tvShow) => (
-        <ListItem
-          key={tvShow.id}
-          imageURL={tvShow.poster_path}
-          listItemName={tvShow.name}
-          imageALT={tvShow.name}
-          listItemRating={tvShow.vote_average}
-        />
-      ))}
+      <ItemsRow rowItems={AllTVShows} />
     </div>
   );
 };

@@ -5,7 +5,7 @@ import axios from "axios";
 import classes from "./TrendingTVShows.module.css";
 
 // Imports for external Components
-import ListItem from "../UI/ListItem";
+import ItemsRow from "../UI/ItemsRow";
 
 const TrendingTVShows = (props) => {
   // State for our trending movies
@@ -33,15 +33,7 @@ const TrendingTVShows = (props) => {
 
   return (
     <div className={`${classes.TrendingTvShows} ${props.className}`}>
-      {trendingTVShows.map((trendingTVShow) => (
-        <ListItem
-          key={trendingTVShow.id}
-          imageURL={trendingTVShow.poster_path}
-          listItemName={trendingTVShow.name}
-          imageALT={trendingTVShow.original_title}
-          listItemRating={trendingTVShow.vote_average}
-        />
-      ))}
+      <ItemsRow rowItems={trendingTVShows} />
     </div>
   );
 };

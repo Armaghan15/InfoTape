@@ -1,6 +1,25 @@
 .AllTVShows {
-  margin-top: 20px;
+  /* margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 10px;
+  grid-template-rows: repeat(2px, 1fr);
+  gap: 10px; */
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+
+
+.AllTVShows::-webkit-scrollbar {
+  margin-top: 100px;
+  height: 3px;
+  width: 2px;
+}
+.AllTVShows::-webkit-scrollbar-track {
+  background: #000;
+  border: 1px solid rgb(92, 92, 92);
+}
+.AllTVShows::-webkit-scrollbar-thumb {
+  width: 10px;
 }

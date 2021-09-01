@@ -5,7 +5,7 @@ import axios from "axios";
 import classes from "./AllMovies.module.css";
 
 // Imports for external Components
-import ListItem from "../UI/ListItem";
+import ItemsRow from "../UI/ItemsRow";
 
 const AllMovies = (props) => {
   // State for our All movies
@@ -33,15 +33,7 @@ const AllMovies = (props) => {
 
   return (
     <div className={`${classes.AllMovies} ${props.className}`}>
-      {AllMovies.map((movie) => (
-        <ListItem
-          key={movie.id}
-          imageURL={movie.poster_path}
-          listItemName={movie.original_title}
-          imageALT={movie.original_title}
-          listItemRating={movie.vote_average}
-        />
-      ))}
+      <ItemsRow rowItems={AllMovies} />
     </div>
   );
 };

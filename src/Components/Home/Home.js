@@ -1,11 +1,9 @@
 import React from "react";
-import { Link as ScrollLink } from "react-scroll";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, Router } from "react-router-dom";
 
 import classes from "./Home.module.css";
 
 // Imports for external components
-import HomeOption from "./HomeOption";
 
 const Home = () => {
   return (
@@ -14,25 +12,17 @@ const Home = () => {
         <div className={classes.homeHeaderText}>
           <h1 className={classes.homeHeaderH1}>INFOTAPE</h1>
           <h1 className={classes.homeHeaderParagraph}>
-            Get Real Data of Thousands of movies and TV Shows
+            Get Real Data about Thousands of movies and TV Shows
           </h1>
-          <ScrollLink
+          <RouterLink
             className={classes.exploreButton}
-            to="homeOptions"
+            to="/explore"
             smooth={true}
             duration={1500}
           >
             Explore
-          </ScrollLink>
+          </RouterLink>
         </div>
-      </section>
-      <section id="homeOptions" className={classes.homeOptions}>
-        <RouterLink className="RouterLink" to="/movies">
-          <HomeOption className={classes.moviesHomeOption} title="Movies" />
-        </RouterLink>
-        <RouterLink className="RouterLink" to="/tvshows">
-          <HomeOption className={classes.tvShowsHomeOption} title="TV Shows" />
-        </RouterLink>
       </section>
     </div>
   );
