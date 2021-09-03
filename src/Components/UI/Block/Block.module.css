@@ -1,0 +1,11 @@
+:root {
+  --green: #01DF72;
+  --green-hover: #01924c;
+}
+
+
+
+.Block {
+  border: 2px solid var(--green);
+  padding: 5px;
+}

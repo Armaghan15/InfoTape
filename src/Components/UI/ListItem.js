@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 
 import classes from "./ListItem.module.css";
 
-const IMG_URL = "https://image.tmdb.org/t/p/w500/";
+// w92, w154, w185, w342, w500, w780, original
+const POSTER_SIZE = "w780";
+
+// Images URL from TMDB API
+const IMG_URL = `https://image.tmdb.org/t/p/${POSTER_SIZE}/`;
 
 const ListItem = (props) => {
   return (

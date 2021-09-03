@@ -33,7 +33,7 @@ const AllMovies = (props) => {
 
   return (
     <div className={`${classes.AllMovies} ${props.className}`}>
-      <ItemsRow rowItems={AllMovies} />
+      <ItemsRow rowItems={AllMovies} mediaType="movie" />
     </div>
   );
 };

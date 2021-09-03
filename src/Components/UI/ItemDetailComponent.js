@@ -1,15 +1,22 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
-import { isCompositeComponentWithType } from "react-dom/test-utils";
+
+// Imports for styles
+import classes from "./ItemDetailComponent.module.css";
+
+// Imports for external Components
 
 // Sizes: w300, w780, w1280, original
 const BACKDROP_SIZE = "w1280";
 // w92, w154, w185, w342, w500, w780, original
 const POSTER_SIZE = "w780";
 
-// Base Images url extension for TMDB
+// Base Images url for backdrop from TMDB
 const IMG_URL = `https://image.tmdb.org/t/p/${BACKDROP_SIZE}/`;
+
+// Base Images url for poster image from TMDB
+const POSTER_IMG_URL = `https://image.tmdb.org/t/p/${POSTER_SIZE}/`;
 
 const ItemDetail = styled.div`
   background: url("${(props) => IMG_URL + props.itemBackdropPath}");
@@ -34,7 +41,7 @@ const ItemDetail = styled.div`
 
 const ItemDetailComponent = (props) => {
   // State for the searched movie with details
-  const [selectedMovie, setSelectedMovie] = useState({});
+  const [selectedItem, setSelectedItem] = useState({});
 
   // Method for fetching/getting item details from TMDB
   const fetchItemDetails = async () => {
@@ -44,7 +51,7 @@ const ItemDetailComponent = (props) => {
     // Checking if the response is valid
     if (responseIsValid) {
       const data = await response.data;
-      setSelectedMovie(data);
+      setSelectedItem(data);
     } else {
       console.log("Error");
     }
@@ -55,11 +62,42 @@ const ItemDetailComponent = (props) => {
     fetchItemDetails();
   }, []);
 
-  console.log(selectedMovie);
+  const SelectedItemGenres = selectedItem.genres?.map((genre) => (
+    <span className={classes.genreItem} key={genre.id}>
+      {genre.name}
+    </span>
+  ));
 
   return (
-    <ItemDetail itemBackdropPath={selectedMovie.backdrop_path}>
-      {selectedMovie.title}
+    <ItemDetail itemBackdropPath={selectedItem.backdrop_path}>
+      <div className={classes.ItemDetailsCard}>
+        <img
+          className={classes.ItemDetailPoster}
+          src={POSTER_IMG_URL + selectedItem.poster_path}
+        ></img>
+        <div className={classes.DetailCardText}>
+          <h1 className={classes.DetailItem}>
+            Title:{" "}
+            <span>
+              {selectedItem.original_title || selectedItem.original_name}
+            </span>
+          </h1>
+          <hr />
+          <h1 className={classes.DetailItem}>
+            Language: <span>{selectedItem.original_language}</span>
+          </h1>
+          <hr />
+          <h1 className={classes.DetailItem}>Genres: {SelectedItemGenres}</h1>
+          <hr></hr>
+          <h1 className={classes.DetailItem}>
+            Release Date:{" "}
+            <span>
+              {selectedItem.release_date || selectedItem.first_air_date}
+            </span>
+          </h1>
+          <hr></hr>
+        </div>
+      </div>
     </ItemDetail>
   );
 };

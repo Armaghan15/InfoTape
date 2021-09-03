@@ -20,7 +20,7 @@ const ItemsRow = (props) => {
           listItemName={rowItem.name}
           imageALT={rowItem.name}
           listItemRating={rowItem.vote_average}
-          mediaType={rowItem.media_type}
+          mediaType={props.mediaType}
         />
       ))}
     </div>

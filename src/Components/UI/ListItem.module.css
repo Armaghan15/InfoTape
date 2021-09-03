@@ -59,12 +59,12 @@
 
 @media screen and (max-width: 1500px) {
   .ListItem {
-    width: 200px;
+    width: 200.5px;
     height: 290px;
   }
 
   .ListItem img {
-    width: 180px;
+    width: 200.5px;
     height: 245px;
   }
 

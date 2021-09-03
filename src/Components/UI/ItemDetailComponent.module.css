@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700&family=Bebas+Neue&display=swap');
+
+
+
+:root {
+  --green: #01DF72;
+  --green-hover: #01924c;
+}
+
+
+.ItemDetailsCard {
+  background-color: rgba(0, 0, 0, 0.864);
+  width: 100%;
+  height: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -100px;
+}
+
+.ItemDetailPoster {
+  width: 30%;
+  height: 50%;
+  border-radius: 5px;
+}
+
+.ItemDetailPoster {
+  box-shadow: 0 1px 3px var(--green), 0 1px 2px var(--green);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.ItemDetailPoster:hover {
+  box-shadow: 0 6px 20px var(--green-hover), 0 1px 1px var(--green-hover);
+}
+
+.DetailCardText {
+  text-align: left;
+  font-family: 'Barlow Condensed', sans-serif;
+  color: white;
+  margin-left: -500px;
+}
+
+.DetailItem {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+
+span {
+  color: var(--green);
+  font-size: 28px;
+}
+
+.genreItem {  
+  margin-right: 10px;
+  font-size: 20px;
+  color: var(--green);
+  border: 1px solid var(--green);
+  padding: 4px;
+}
+
+
+.DetailItemOverview {
+  text-align: center;
+  width: 20%;
+}

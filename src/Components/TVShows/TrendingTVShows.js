@@ -33,7 +33,7 @@ const TrendingTVShows = (props) => {
 
   return (
     <div className={`${classes.TrendingTvShows} ${props.className}`}>
-      <ItemsRow rowItems={trendingTVShows} />
+      <ItemsRow rowItems={trendingTVShows} mediaType="tv" />
     </div>
   );
 };
