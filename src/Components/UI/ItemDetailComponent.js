@@ -96,6 +96,9 @@ const ItemDetailComponent = (props) => {
             </span>
           </h1>
           <hr></hr>
+          {/* <div className={classes.ItemDetailParagraph}>
+            <p>{selectedItem.overview}</p>
+          </div> */}
         </div>
       </div>
     </ItemDetail>

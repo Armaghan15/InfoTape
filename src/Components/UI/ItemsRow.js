@@ -17,10 +17,10 @@ const ItemsRow = (props) => {
           key={rowItem.id}
           id={rowItem.id}
           imageURL={rowItem.poster_path}
-          listItemName={rowItem.name}
+          listItemName={rowItem.name || rowItem.original_title}
           imageALT={rowItem.name}
           listItemRating={rowItem.vote_average}
-          mediaType={props.mediaType}
+          mediaType={rowItem.media_type || props.mediaType}
         />
       ))}
     </div>
