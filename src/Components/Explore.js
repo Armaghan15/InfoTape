@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link as RouterLink, Router } from "react-router-dom";
 import axios from "axios";
 
@@ -30,28 +30,32 @@ const Movies = () => {
   // State for the returned items from search
   const [searchItemsList, setSearchItemsList] = useState([]);
 
+  const searchInputValueChangeHandler = (event) => {
+    setSearchInputValue(event.target.value);
+  };
+
   // Method for grabing the user input and searching items from TMDB
-  const searchItemsHandler = async (event) => {
-    event.preventDefault();
-
+  const searchItems = async (searchValue) => {
     // TMDB URL through which we are going to search for items
-    const searchURL = `https://api.themoviedb.org/3/search/multi?api_key=508720d4e5bd95e63fd8e0b7067d506c&language=en-US&query=${searchInputValue}&page=1&include_adult=false`;
-
-    console.log(searchInputValue);
+    const searchURL = `https://api.themoviedb.org/3/search/multi?api_key=508720d4e5bd95e63fd8e0b7067d506c&language=en-US&query=${searchValue}&include_adult=false`;
 
     // Using Axios to fetch Searched Items
     const searchResponse = await axios.get(searchURL);
     const searchResponseIsValid =
       searchResponse && searchResponse.status === 200;
 
-    if (searchResponseIsValid) {
-      const data = await searchResponse.data.results;
-      setSearchItemsList(data);
-    }
+    // if (searchResponseIsValid) {
+    setSearchItemsList(searchResponse.data.results);
+    // }
 
     // Changing the bodyContent state to the searched item since we only want to display this
     setBodyContent(<ItemsRow rowItems={searchItemsList} mediaType="movie" />);
   };
+
+  useEffect(() => {
+    searchItems(searchInputValue);
+    console.log(searchInputValue);
+  }, [searchInputValue]);
 
   return (
     <div id="movies" className={classes.movies}>
@@ -59,13 +63,13 @@ const Movies = () => {
         <RouterLink style={{ textDecoration: "none" }} to="/">
           <h1 className={classes.logo}>INFOTAPE</h1>
         </RouterLink>
-        <form onSubmit={searchItemsHandler} className={classes.searchBar}>
+        <form className={classes.searchBar}>
           <input
             value={searchInputValue}
             placeholder="Search Movie or TV Show"
             type="text"
             required
-            onChange={(event) => setSearchInputValue(event.target.value)}
+            onChange={searchInputValueChangeHandler}
           />
           <button>
             <i class="fas fa-search"></i>
